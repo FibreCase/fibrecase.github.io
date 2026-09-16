@@ -1,0 +1,90 @@
+---
+import '../styles/global.css';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ying Xu — Wind Energy &amp; Power Systems</title>
+    <meta name="description" content="Ying Xu — B.Eng. candidate in New Energy Science and Engineering (wind-energy focus) at North China Electric Power University. Prospective PhD student in power systems and renewable energy integration." />
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="icon" href="/icon-192.png" type="image/png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <script is:inline>
+      // Set theme before first paint to avoid flash.
+      (function () {
+        try {
+          var t = localStorage.getItem('theme');
+          if (t !== 'light' && t !== 'dark') {
+            t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+          }
+          document.documentElement.dataset.theme = t;
+        } catch (e) { /* default light */ }
+      })();
+    </script>
+  </head>
+  <body>
+    <nav class="topbar">
+      <div class="inner">
+        <a class="brand" href="/">Ying<b>Xu</b></a>
+        <span class="sp"></span>
+        <button class="tbtn" id="theme-toggle" aria-label="Toggle dark mode">
+          <svg id="icon-moon" viewBox="0 0 16 16"><path d="M9.598 1.591a.75.75 0 0 1 .313.931 7.5 7.5 0 0 0 1.033 6.538.75.75 0 0 1-.495 1.106 7.5 7.5 0 0 1-6.508-1.46.75.75 0 0 1-.225-.907A9.5 9.5 0 0 1 8.595 1.1a.75.75 0 0 1 1.003.491z"/></svg>
+          <svg id="icon-sun" viewBox="0 0 16 16" style="display:none"><path d="M8 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/></svg>
+          <span id="theme-label">Dark</span>
+        </button>
+      </div>
+    </nav>
+    <slot />
+    <button id="to-top" aria-label="Back to top" title="Back to top">↑</button>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const btn = document.getElementById('theme-toggle');
+        const moon = document.getElementById('icon-moon');
+        const sun = document.getElementById('icon-sun');
+        const label = document.getElementById('theme-label');
+        const sync = () => {
+          const dark = document.documentElement.dataset.theme === 'dark';
+          moon.style.display = dark ? 'none' : '';
+          sun.style.display = dark ? '' : 'none';
+          label.textContent = dark ? 'Light' : 'Dark';
+        };
+        sync();
+
+        // Follow the device's current color scheme while no explicit
+        // preference is saved; a saved choice always wins.
+        const mq = window.matchMedia('(prefers-color-scheme: dark)');
+        const followDevice = () => {
+          try { if (localStorage.getItem('theme') !== null) return; } catch (e) {}
+          document.documentElement.dataset.theme = mq.matches ? 'dark' : 'light';
+          sync();
+        };
+        if (typeof mq.addEventListener === 'function') {
+          mq.addEventListener('change', followDevice);
+        } else if (typeof mq.addListener === 'function') {
+          mq.addListener(followDevice);
+        }
+
+        btn.addEventListener('click', () => {
+          const cur = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+          document.documentElement.dataset.theme = cur;
+          try { localStorage.setItem('theme', cur); } catch (e) {}
+          sync();
+        });
+
+        // Floating back-to-top button, visible after scrolling.
+        const toTop = document.getElementById('to-top');
+        const onScroll = () => {
+          toTop.classList.toggle('show', window.scrollY > 400);
+        };
+        window.addEventListener('scroll', onScroll, { passive: true });
+        onScroll();
+        toTop.addEventListener('click', () => {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      });
+    </script>
+  </body>
+</html>

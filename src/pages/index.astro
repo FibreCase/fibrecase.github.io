@@ -1,0 +1,273 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base>
+
+<div class="hero">
+  <div class="page">
+    <p class="kicker" data-rise style="--d:.05s"><span class="dot"></span>Prospective PhD Student · Fall 2027</p>
+    <h1 data-rise style="--d:.15s">Ying Xu</h1>
+    <p class="tag" data-rise style="--d:.3s">
+      <b>Power systems</b> and <b>renewable energy integration</b>.
+      B.Eng. candidate in New Energy Science and Engineering (wind-energy focus) at
+      North China Electric Power University.
+    </p>
+    <div class="actions" data-rise style="--d:.42s">
+      <a href="mailto:fibrecase@ncepu.edu.cn">Email</a>
+      <a href="https://github.com/FibreCase" target="_blank" rel="noopener">GitHub</a>
+      <a href="/CV-YingXu-27fallPhD.pdf">CV (PDF)</a>
+    </div>
+  </div>
+</div>
+
+<div class="page">
+
+  <section id="about" data-rise>
+    <h2><span class="no">01</span>About<span class="rule"></span></h2>
+    <p>
+      I am finishing my B.Eng. in New Energy Science and Engineering (wind-energy track) at
+      North China Electric Power University (expected June 2027), with a GPA of 82.9% and
+      strong results in my wind-engineering specialization — Turbine Aerodynamics and
+      Wind Resource Measurement &amp; Assessment (95/100), Numerical Simulation (90).
+    </p>
+    <p>
+      My hands-on background combines <b>CFD simulation</b> of wind-relevant external flows
+      (ANSYS Fluent / OpenFOAM) with <b>hardware and embedded systems</b>: I won
+      the <b>National First Prize</b> in the China Undergraduate Electronic Design Contest
+      (power-monitoring circuit design and system integration), and I maintain a small
+      portfolio of open hardware / edge-computing projects. I am looking for a fully funded
+      PhD position (Fall 2027) in renewable-energy integration, power-system simulation,
+      and grid interfacing.
+    </p>
+  </section>
+
+  <section id="research-interests" data-rise>
+    <h2><span class="no">02</span>Research Interests<span class="rule"></span></h2>
+    <div class="chiprow">
+      <span class="chip">Renewable energy integration</span>
+      <span class="chip">Power systems dynamics</span>
+      <span class="chip">Wind energy systems</span>
+      <span class="chip">Power electronics / grid-interface converters</span>
+      <span class="chip">CFD / numerical simulation</span>
+      <span class="chip">Data-driven methods for energy</span>
+    </div>
+  </section>
+
+  <section id="education" data-rise>
+    <h2><span class="no">03</span>Education<span class="rule"></span></h2>
+    <div class="item">
+      <div class="meta"><h3>North China Electric Power University</h3><span class="dates">2023.09 – 2027.06 (expected)</span></div>
+      <p class="sub">B.Eng. in New Energy Science and Engineering (wind-energy focus) — Beijing</p>
+      <ul>
+        <li>GPA 82.9% (3.29/5.00 university scale)</li>
+        <li>Top courses: Turbine Aerodynamics (95), Wind Resource Measurement &amp; Assessment (95), Numerical Simulation (90), Reliability Engineering (90); also Circuit Analysis, Electrical Machines, Power Electronics, Control Theory, Engineering Fluid Mechanics</li>
+        <li>Honors: University Merit Student; 2nd-Class University Scholarship; Science &amp; Technology Innovation Scholarship</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="research" data-rise>
+    <h2><span class="no">04</span>Research Experience<span class="rule"></span></h2>
+    <div class="item">
+      <div class="meta"><h3>CFD Simulation Researcher — Wind Power Research Center</h3><span class="dates">2025.07 – 2025.08</span></div>
+      <p class="sub">Independent simulation project under a PhD researcher's guidance</p>
+      <ul>
+        <li>Completed five external-flow cases in <b>ANSYS Fluent</b> with an OpenFOAM workflow: cylinder flow, vortex-induced vibration, NACA0012 static/dynamic stall, S809 dynamic stall</li>
+        <li>Built meshes, configured turbulence models and inflation layers; post-processed airfoil force coefficients and stall behavior for wind-turbine airfoils; open-source case: <a class="ref" href="https://github.com/FibreCase/openfoam-cylinder2D" target="_blank" rel="noopener">github.com/FibreCase/openfoam-cylinder2D</a></li>
+      </ul>
+      <div class="photos">
+        <figure class="photo">
+          <img src="/cfd/naca0012-static.jpg" alt="CFD result — NACA0012 static stall simulation" loading="lazy" />
+          <figcaption>NACA0012 — static stall</figcaption>
+        </figure>
+        <figure class="photo">
+          <img src="/cfd/naca0012-dynamic-stall.jpg" alt="CFD result — NACA0012 dynamic stall simulation" loading="lazy" />
+          <figcaption>NACA0012 — dynamic stall</figcaption>
+        </figure>
+        <figure class="photo">
+          <img src="/cfd/s809-dynamic-stall.jpg" alt="CFD result — S809 dynamic stall simulation" loading="lazy" />
+          <figcaption>S809 — dynamic stall</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="leadership" data-rise>
+    <h2><span class="no">05</span>Leadership<span class="rule"></span></h2>
+    <div class="item">
+      <div class="lead-row">
+        <div class="lead-text">
+          <div class="meta"><h3>Head of Technology Department, MOS Innovation Lab, NCEPU</h3><span class="dates">2025.05 – present</span></div>
+          <ul>
+            <li>Organized STM32 embedded-development training and guided new members through a line-following robot</li>
+            <li>Designed the lab's technical-assessment scheme and led project reviews/defenses for dozens of members</li>
+            <li>Assisted with lab inventory management and improved the equipment-borrowing management system</li>
+          </ul>
+        </div>
+        <figure class="photo lead-photo">
+          <img src="/leadership/speech.jpg" alt="Ying Xu giving a talk at the MOS Innovation Lab" loading="lazy" />
+          <figcaption>Giving a talk at the MOS Innovation Lab</figcaption>
+        </figure>
+      </div>
+      </div>
+  </section>
+
+  <section id="projects" data-rise>
+    <h2><span class="no">06</span>Selected Projects<span class="rule"></span></h2>
+
+    <div class="item">
+      <div class="meta"><h3>Monocular-Vision Target Measurement Device — National First Prize</h3><span class="dates">2025.07 – 2025.08</span></div>
+      <p class="sub">China Undergraduate Electronic Design Contest, National Finals (hardware &amp; integration)</p>
+      <ul>
+        <li>Single 4K industrial camera measures target dimensions and distance (rectangle / circle / triangle) with error &lt; 2 mm at 1.6 m</li>
+        <li>Designed a custom power-monitoring circuit (commercial modules prohibited by contest rules): peak 7 W, idle 5 W (limit 10 W)</li>
+        <li>Owned MIPI display-module adaptation (custom adapter board) and system integration; supported the vision-pipeline and UI work; stable on-site operation through the 4-day, 3-night final</li>
+        <li>Open source: <a class="ref" href="https://oshwhub.com/lxu0423/2025-nuedc-works" target="_blank" rel="noopener">oshwhub.com/lxu0423/2025-nuedc-works</a> · <a class="ref" href="https://github.com/diylxy/flutter_nuedc_v2" target="_blank" rel="noopener">phone-port app (GitHub)</a></li>
+      </ul>
+      <div class="photos">
+        <figure class="photo">
+          <img src="/nuedc/bench.jpg" alt="Contest workstation with the vision system running on screen" loading="lazy" />
+          <figcaption>Contest workstation, 2025 — vision pipeline running live</figcaption>
+        </figure>
+        <figure class="photo">
+          <img src="/nuedc/finals-team.jpg" alt="Team at the national finals holding the C-problem sign" loading="lazy" />
+          <figcaption>National finals, Dalian · 2025 — Ying Xu, first from the right</figcaption>
+        </figure>
+        <figure class="photo">
+          <img src="/nuedc/finals-booth.jpg" alt="Project booth at the national finals with the poster and hardware" loading="lazy" />
+          <figcaption>Project booth — “Monocular-Vision Target Measurement Device” — Ying Xu, first from the right</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="meta"><h3>Op-Amp Parameter Measurement Device — National Third Prize</h3><span class="dates">2024.08</span></div>
+      <p class="sub">National Undergraduate Electronic Design Contest — TI Cup Analog Electronic System Design, national finals (Hangzhou)</p>
+      <ul>
+        <li>DIP-8 socket instrument that measures an op-amp's <b>unity-gain bandwidth, slew rate, and quiescent power</b>: ±12 V dual supplies and an adjustable sinusoidal stimulus up to 2 MHz from an AD9850 DDS</li>
+        <li>Owned the measurement-current circuit design and calculation; delivered most measurement functions in the 2-day, 1-night closed finals</li>
+      </ul>
+      <div class="photos two">
+        <figure class="photo">
+          <img src="/edc2024/finals-ti-booth.jpg" alt="Texas Instruments exhibition at the national finals" loading="lazy" />
+          <figcaption>TI exhibition, national finals · Hangzhou — Ying Xu, first from the right</figcaption>
+        </figure>
+        <figure class="photo">
+          <img src="/edc2024/finals-banner.jpg" alt="2024 TI Cup analog design finals venue banner in Hangzhou" loading="lazy" />
+          <figcaption>National finals venue · 2024 — Ying Xu, first from the right</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="meta"><h3>Tic-Tac-Toe Robot Device — Provincial (Beijing) First Prize</h3><span class="dates">2024.07 – 2024.08</span></div>
+      <p class="sub">China Undergraduate Electronic Design Contest, Beijing provincial round (TI Cup 2024)</p>
+      <ul>
+        <li>Vision-guided robot that plays tic-tac-toe against a human: a <b>Rockchip RK3566</b> runs YOLOv5 piece detection and the game logic; an <b>ESP32</b> drives a CoreXY gantry and an electromagnetic gripper</li>
+        <li>Passed all functional requirements in the 4-day, 3-night build — placement accuracy, play under ±45° board rotation, unbeatable / stalemate strategy, and automatic correction of a moved piece</li>
+        <li>Owned the <b>YOLOv5</b> machine-vision pipeline for piece recognition and the game logic; supported system integration</li>
+        <li>Demo video: <a class="ref" href="https://www.bilibili.com/video/BV1eLvheoEhz" target="_blank" rel="noopener">bilibili.com/video/BV1eLvheoEhz</a></li>
+      </ul>
+      <div class="photos two">
+        <figure class="photo">
+          <img src="/edc2024/beijing-bench.jpg" alt="Oscilloscope and LED indicator at the evaluation bench" loading="lazy" />
+          <figcaption>Test bench, evaluation day · 2024</figcaption>
+        </figure>
+        <figure class="photo">
+          <img src="/edc2024/beijing-venue.jpg" alt="TI Cup 2024 Beijing contest evaluation venue" loading="lazy" />
+          <figcaption>TI Cup 2024 Beijing contest — evaluation venue — Ying Xu, first from the right</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="meta"><h3>12 V Power-Distribution Monitor</h3><span class="dates">2026.09 – present</span></div>
+      <p class="sub">Open-hardware power monitoring — firmware + backend + web dashboard</p>
+      <ul>
+        <li>End-to-end power-monitoring system: custom open-source PCB, ESP32-C3 firmware (C/ESP-IDF) sampling an INA226 at 10 Hz over a custom 20-byte TCP wire protocol, with adaptive 10 Hz / 0.1 Hz sampling by viewer presence</li>
+        <li><b>Dual-path overcurrent protection</b> (hardware ALERT-pin comparator + independent backend threshold) with per-event time/voltage/current/power logging</li>
+        <li><b>Dual-slot OTA with automatic rollback</b> and a custom two-slot partition table — a bad update cannot brick a deployed device</li>
+        <li>Python backend (FastAPI, async TCP ingest, SQLite persistence, WebSocket live broadcast) + web dashboard — <a class="ref" href="https://github.com/FibreCase/dynamic-power-monitor" target="_blank" rel="noopener">github.com/FibreCase/dynamic-power-monitor</a> · <a class="ref" href="https://oshwhub.com/fibrecase/project_mfgowtnz" target="_blank" rel="noopener">oshwhub.com/fibrecase/project_mfgowtnz</a></li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <div class="meta"><h3>Wind-Resource Assessment Toolkit</h3><span class="dates">2026.06</span></div>
+      <p class="sub">Python pipeline for wind-farm siting — QC, Weibull fitting, shear &amp; roses</p>
+      <ul>
+        <li>Multi-stage automated QC on SODAR/LIDAR radar (40–200 m) and met-mast (2–80 m) wind data: range / correlation / trend / missing-value checks</li>
+        <li>Weibull distribution fitting, power-law wind-shear and air-density estimation, wind-energy-density roses, and per-height data-availability statistics; unit-tested — <a class="ref" href="https://github.com/FibreCase/WindAssess" target="_blank" rel="noopener">github.com/FibreCase/WindAssess</a></li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <div class="meta"><h3>NanoScope — Two-Channel Pocket Oscilloscope</h3><span class="dates">2025.06 – 2025.07</span></div>
+      <ul>
+        <li>Custom measurement instrument: OPA4197 analog front end (−5 V to +12 V), STM32 ADC + DMA high-speed acquisition, and frequency / <b>phase</b> measurement via external timers (50 Hz – 200 kHz); ESP32 real-time display with a BLE Flutter app — <a class="ref" href="https://github.com/FibreCase/NanoScope" target="_blank" rel="noopener">github.com/FibreCase/NanoScope</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="awards" data-rise>
+    <h2><span class="no">07</span>Awards &amp; Honors<span class="rule"></span></h2>
+    <div class="award"><span class="what"><b>National First Prize</b> (nominated for the TI Cup), China Undergraduate Electronic Design Contest</span><span class="when">2025</span></div>
+    <div class="award"><span class="what"><b>National Third Prize</b>, China Undergraduate Electronic Design Contest — TI Cup Analog Electronic System Design</span><span class="when">2024</span></div>
+    <div class="award"><span class="what"><b>Provincial (Beijing) First Prize</b>, China Undergraduate Electronic Design Contest</span><span class="when">2024</span></div>
+    <div class="award"><span class="what">University Merit Student; 2nd-Class University Scholarship; Science &amp; Technology Innovation Scholarship</span><span class="when">NCEPU</span></div>
+  </section>
+
+  <section id="skills" data-rise>
+    <h2><span class="no">08</span>Skills<span class="rule"></span></h2>
+    <table class="skills">
+      <tr><td>Simulation</td><td>ANSYS Fluent (2D external flow), OpenFOAM, 3D modeling</td></tr>
+      <tr><td>Programming</td><td>C, Python (embedded &amp; backend), MATLAB (basic)</td></tr>
+      <tr><td>Embedded</td><td>STM32 / ESP32 (ADC, UART, SPI, I²C, PWM, DMA), Rockchip embedded Linux, MIPI display, PCB design, hardware debugging</td></tr>
+      <tr><td>Tools</td><td>Git, Docker, Linux, AutoCAD, SolidWorks</td></tr>
+      <tr><td>Languages</td><td>English: IELTS (exam 23 Sep 2026, target 7.0); CET-6 (470); fluent in reading English technical literature</td></tr>
+    </table>
+  </section>
+
+  <section id="beyond" data-rise>
+    <h2><span class="no">09</span>Beyond the Lab<span class="rule"></span></h2>
+    <div class="photos">
+      <figure class="photo">
+        <img src="/life/hongkong-2025.jpg" alt="Victoria Peak overlooking Victoria Harbour, Hong Kong" loading="lazy" />
+        <figcaption>Victoria Peak, Hong Kong · 2025</figcaption>
+      </figure>
+      <figure class="photo">
+        <img src="/life/sapporo-teine-2026.jpg" alt="At Sapporo Teine ski area, Japan, overlooking the snowy plain" loading="lazy" />
+        <figcaption>Sapporo Teine, Japan · 2026</figcaption>
+      </figure>
+      <figure class="photo">
+        <img src="/life/sichuan-2026-02.jpg" alt="Visiting a wind farm in Sichuan" loading="lazy" />
+        <figcaption>Wind farm, Sichuan · 2026</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section id="contact" data-rise>
+    <h2><span class="no">10</span>Contact<span class="rule"></span></h2>
+    <p>
+      <b>Email:</b> <a class="ref" href="mailto:fibrecase@ncepu.edu.cn">fibrecase@ncepu.edu.cn</a> · <a class="ref" href="mailto:fibrecase@163.com">fibrecase@163.com</a><br>
+      <b>GitHub:</b> <a class="ref" href="https://github.com/FibreCase" target="_blank" rel="noopener">github.com/FibreCase</a><br>
+      <b>Location:</b> Beijing, China
+    </p>
+    <p>
+      I am happy to receive inquiries about PhD supervision (Fall 2027),
+      research collaboration, and my open-source hardware work.
+    </p>
+  </section>
+
+</div>
+
+<footer>
+  <div class="page">
+    <div class="inner">
+      <span><b>Ying Xu</b> · North China Electric Power University</span>
+      <span>Last updated September 2026</span>
+    </div>
+  </div>
+</footer>
+
+</Base>
