@@ -27,18 +27,23 @@ import Base from '../layouts/Base.astro';
     <h2><span class="no">01</span>About<span class="rule"></span></h2>
     <p>
       I am finishing my B.Eng. in New Energy Science and Engineering (wind-energy track) at
-      North China Electric Power University (expected June 2027), with a GPA of 82.9% and
+      North China Electric Power University (expected June 2027), with an average of 82.9/100 and
       strong results in my wind-engineering specialization — Turbine Aerodynamics and
       Wind Resource Measurement &amp; Assessment (95/100), Numerical Simulation (90).
     </p>
     <p>
-      My hands-on background combines <b>CFD simulation</b> of wind-relevant external flows
-      (ANSYS Fluent / OpenFOAM) with <b>hardware and embedded systems</b>: I won
-      the <b>National First Prize</b> in the China Undergraduate Electronic Design Contest
-      (power-monitoring circuit design and system integration), and I maintain a small
-      portfolio of open hardware / edge-computing projects. I am looking for a fully funded
-      PhD position (Fall 2027) in renewable-energy integration, power-system simulation,
-      and grid interfacing.
+      I am currently working on a <b>multi-timescale model of a direct-drive PMSG wind turbine</b> —
+      a funded project at the National Key Laboratory of Renewable Energy Electric Systems,
+      building reduced-order average-value models benchmarked against WECC Type 4 and
+      IEC 61400-27-1 reference models for system-level grid-integration simulation. Before that,
+      I completed <b>CFD simulations</b> of wind-turbine-relevant external flows
+      (ANSYS Fluent, with selected cases cross-verified in OpenFOAM). My embedded and hardware
+      background — including a <b>National First Prize</b> in the China Undergraduate
+      Electronic Design Contest (power-monitoring circuit design and system integration) —
+      backs the research with strong implementation ability, and I maintain a small portfolio
+      of open hardware / edge-computing projects. I am looking for a fully funded
+      PhD position (Fall 2027) in renewable-energy integration, wind-turbine modeling,
+      and power-system simulation.
     </p>
   </section>
 
@@ -60,7 +65,7 @@ import Base from '../layouts/Base.astro';
       <div class="meta"><h3>North China Electric Power University</h3><span class="dates">2023.09 – 2027.06 (expected)</span></div>
       <p class="sub">B.Eng. in New Energy Science and Engineering (wind-energy focus) — Beijing</p>
       <ul>
-        <li>GPA 82.9% (3.29/5.00 university scale)</li>
+        <li>Average: 82.9/100 (university average)</li>
         <li>Top courses: Turbine Aerodynamics (95), Wind Resource Measurement &amp; Assessment (95), Numerical Simulation (90), Reliability Engineering (90); also Circuit Analysis, Electrical Machines, Power Electronics, Control Theory, Engineering Fluid Mechanics</li>
         <li>Honors: University Merit Student; 2nd-Class University Scholarship; Science &amp; Technology Innovation Scholarship</li>
       </ul>
@@ -70,11 +75,20 @@ import Base from '../layouts/Base.astro';
   <section id="research" data-rise>
     <h2><span class="no">04</span>Research Experience<span class="rule"></span></h2>
     <div class="item">
-      <div class="meta"><h3>CFD Simulation Researcher — Wind Power Research Center</h3><span class="dates">2025.07 – 2025.08</span></div>
-      <p class="sub">Independent simulation project under a PhD researcher's guidance</p>
+      <div class="meta"><h3>Direct-Drive PMSG Wind-Turbine Multi-Timescale Modeling &amp; Simulation (in progress)</h3><span class="dates">2026.09 – present</span></div>
+      <p class="sub">National Key Laboratory of Renewable Energy Electric Systems, NCEPU — funded undergraduate research project, sole researcher (advised by Dong Zhao, Senior Engineer)</p>
       <ul>
-        <li>Completed five external-flow cases in <b>ANSYS Fluent</b> with an OpenFOAM workflow: cylinder flow, vortex-induced vibration, NACA0012 static/dynamic stall, S809 dynamic stall</li>
-        <li>Built meshes, configured turbulence models and inflation layers; post-processed airfoil force coefficients and stall behavior for wind-turbine airfoils; open-source case: <a class="ref" href="https://github.com/FibreCase/openfoam-cylinder2D" target="_blank" rel="noopener">github.com/FibreCase/openfoam-cylinder2D</a></li>
+        <li>Hierarchical multi-timescale model of a direct-drive PMSG wind turbine — slow layer (rotor aerodynamics, drivetrain, pitch control; seconds scale), middle layer (DC-link voltage / power / MPPT; hundreds of ms), fast layer (current control, electromagnetic dynamics; ms scale) — for system-level grid-integration simulation on the lab's in-house power-system platform</li>
+        <li>Reduced-order average-value modeling via sensitivity analysis and singular-perturbation order reduction, benchmarked against WECC Type 4 and IEC 61400-27-1 (Type 4A/4B) reference models</li>
+        <li>Completed: systematic literature review (12 papers on Type 4/4A/4B standards, model-order reduction, LVRT, and primary-frequency-response control) and the overall modeling scheme; ongoing: model derivation, parameter tables, platform implementation, and wind-speed-step / voltage-sag / frequency-disturbance case studies</li>
+      </ul>
+    </div>
+    <div class="item">
+      <div class="meta"><h3>CFD Simulation Researcher — Wind Power Research Center</h3><span class="dates">2026.07 – 2026.08</span></div>
+      <p class="sub">Independent research project under a PhD researcher's guidance</p>
+      <ul>
+        <li>External-flow simulations of wind-turbine-relevant aerodynamics — cylinder flow, vortex-induced vibration, and static/dynamic stall of NACA0012 and S809 airfoils — in <b>ANSYS Fluent</b>, with selected cases cross-verified in OpenFOAM</li>
+        <li>Responsible for mesh generation, turbulence-model selection, and inflation-layer setup; post-processed airfoil force coefficients and stall behavior; open-source case: <a class="ref" href="https://github.com/FibreCase/openfoam-cylinder2D" target="_blank" rel="noopener">github.com/FibreCase/openfoam-cylinder2D</a></li>
       </ul>
       <div class="photos">
         <figure class="photo">
@@ -120,9 +134,9 @@ import Base from '../layouts/Base.astro';
       <div class="meta"><h3>Monocular-Vision Target Measurement Device — National First Prize</h3><span class="dates">2025.07 – 2025.08</span></div>
       <p class="sub">China Undergraduate Electronic Design Contest, National Finals (hardware &amp; integration)</p>
       <ul>
-        <li>Single 4K industrial camera measures target dimensions and distance (rectangle / circle / triangle) with error &lt; 2 mm at 1.6 m</li>
-        <li>Designed a custom power-monitoring circuit (commercial modules prohibited by contest rules): peak 7 W, idle 5 W (limit 10 W)</li>
-        <li>Owned MIPI display-module adaptation (custom adapter board) and system integration; supported the vision-pipeline and UI work; stable on-site operation through the 4-day, 3-night final</li>
+        <li>Team system: a single 4K industrial camera measures target dimensions and distance (rectangle / circle / triangle) with error &lt; 2 mm at 1.6 m</li>
+        <li>My scope — embedded systems and hardware: designed a custom power-monitoring circuit (commercial modules prohibited by contest rules): peak 7 W, idle 5 W (limit 10 W); MIPI display-module adaptation via a custom adapter board</li>
+        <li>System debugging and integration across the RK3576 embedded-Linux platform (Flutter front end); stable on-site operation through the 4-day, 3-night final</li>
         <li>Open source: <a class="ref" href="https://oshwhub.com/lxu0423/2025-nuedc-works" target="_blank" rel="noopener">oshwhub.com/lxu0423/2025-nuedc-works</a> · <a class="ref" href="https://github.com/diylxy/flutter_nuedc_v2" target="_blank" rel="noopener">phone-port app (GitHub)</a></li>
       </ul>
       <div class="photos">
@@ -182,7 +196,7 @@ import Base from '../layouts/Base.astro';
     </div>
 
     <div class="item">
-      <div class="meta"><h3>12 V Power-Distribution Monitor</h3><span class="dates">2026.09 – present</span></div>
+      <div class="meta"><h3>12 V Power-Distribution Monitor</h3><span class="dates">2026.09</span></div>
       <p class="sub">Open-hardware power monitoring — firmware + backend + web dashboard</p>
       <ul>
         <li>End-to-end power-monitoring system: custom open-source PCB, ESP32-C3 firmware (C/ESP-IDF) sampling an INA226 at 10 Hz over a custom 20-byte TCP wire protocol, with adaptive 10 Hz / 0.1 Hz sampling by viewer presence</li>
@@ -220,11 +234,11 @@ import Base from '../layouts/Base.astro';
   <section id="skills" data-rise>
     <h2><span class="no">08</span>Skills<span class="rule"></span></h2>
     <table class="skills">
-      <tr><td>Simulation</td><td>ANSYS Fluent (2D external flow), OpenFOAM, 3D modeling</td></tr>
-      <tr><td>Programming</td><td>C, Python (embedded &amp; backend), MATLAB (basic)</td></tr>
-      <tr><td>Embedded</td><td>STM32 / ESP32 (ADC, UART, SPI, I²C, PWM, DMA), Rockchip embedded Linux, MIPI display, PCB design, hardware debugging</td></tr>
-      <tr><td>Tools</td><td>Git, Docker, Linux, AutoCAD, SolidWorks</td></tr>
-      <tr><td>Languages</td><td>English: IELTS 7.0 (fluent)</td></tr>
+      <tr><td>Simulation</td><td>ANSYS Fluent (2D external flow), OpenFOAM</td></tr>
+      <tr><td>Programming</td><td>Python, C, MATLAB</td></tr>
+      <tr><td>Embedded</td><td>STM32 / ESP32 (ADC, DMA, UART, SPI, I²C, PWM), Rockchip embedded Linux, MIPI display</td></tr>
+      <tr><td>Tools</td><td>Git, Docker, Linux, PCB design, AutoCAD, SolidWorks</td></tr>
+      <tr><td>Languages</td><td>English — IELTS 7.0</td></tr>
     </table>
   </section>
 
