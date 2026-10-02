@@ -84,21 +84,34 @@ import Base from '../layouts/Base.astro';
       <div class="meta"><h3>CFD Simulation Researcher — Wind Power Research Center</h3><span class="dates">2026.07 – 2026.08</span></div>
       <p class="sub">Independent research project under a PhD researcher's guidance</p>
       <ul>
-        <li>External-flow simulations of wind-turbine-relevant aerodynamics — cylinder flow, vortex-induced vibration, and static/dynamic stall of NACA0012 and S809 airfoils — in <b>ANSYS Fluent</b>, with selected cases cross-verified in OpenFOAM</li>
-        <li>Responsible for mesh generation, turbulence-model selection, and inflation-layer setup; post-processed airfoil force coefficients and stall behavior; open-source case: <a class="ref" href="https://github.com/FibreCase/openfoam-cylinder2D" target="_blank" rel="noopener">github.com/FibreCase/openfoam-cylinder2D</a></li>
+        <li>External-flow simulations of wind-turbine-relevant aerodynamics — cylinder flow, vortex-induced vibration, and static/dynamic stall of NACA0012 and S809 airfoils — in <b>ANSYS Fluent</b>, with the cylinder-flow case reproduced in OpenFOAM</li>
+        <li>Responsible for mesh generation, turbulence-model selection, and inflation-layer setup; post-processed force coefficients and stall behaviour, comparing simulated lift and pitching-moment hysteresis against experimental reference data; open-source case: <a class="ref" href="https://github.com/FibreCase/openfoam-cylinder2D" target="_blank" rel="noopener">github.com/FibreCase/openfoam-cylinder2D</a></li>
+        <li>Documented the five case studies in a technical presentation (August 2026)</li>
       </ul>
-      <div class="photos">
+      <div class="photos two wide">
         <figure class="photo">
-          <img src="/cfd/naca0012-static.jpg" alt="CFD result — NACA0012 static stall simulation" loading="lazy" />
-          <figcaption>NACA0012 — static stall</figcaption>
+          <img src="/cfd/cylinder-flow.jpg" alt="CFD result — flow around a circular cylinder at Re 100, showing the periodic vortex street and lift/drag histories" loading="lazy" />
+          <figcaption>Circular cylinder, Re 100 — periodic vortex street; lift/drag histories</figcaption>
         </figure>
         <figure class="photo">
-          <img src="/cfd/naca0012-dynamic-stall.jpg" alt="CFD result — NACA0012 dynamic stall simulation" loading="lazy" />
-          <figcaption>NACA0012 — dynamic stall</figcaption>
+          <img src="/cfd/cylinder-openfoam.jpg" alt="CFD result — cylinder flow reproduced in OpenFOAM with the Gmsh / OpenFOAM / ParaView workflow" loading="lazy" />
+          <figcaption>Cylinder flow reproduced in OpenFOAM — Gmsh / OpenFOAM / ParaView workflow</figcaption>
         </figure>
         <figure class="photo">
-          <img src="/cfd/s809-dynamic-stall.jpg" alt="CFD result — S809 dynamic stall simulation" loading="lazy" />
-          <figcaption>S809 — dynamic stall</figcaption>
+          <img src="/cfd/cylinder-viv.jpg" alt="CFD result — vortex-induced vibration of a cylinder: response amplitude across reduced velocities" loading="lazy" />
+          <figcaption>Vortex-induced vibration — response amplitude, U = 7…11</figcaption>
+        </figure>
+        <figure class="photo">
+          <img src="/cfd/airfoil-naca0012-static.jpg" alt="CFD result — NACA0012 static aerodynamics at 10, 15 and 20 degrees with SST k-omega" loading="lazy" />
+          <figcaption>NACA0012 static — lift at 10° / 15° / 20°, SST k-ω</figcaption>
+        </figure>
+        <figure class="photo">
+          <img src="/cfd/airfoil-naca0012-dynamic-stall.jpg" alt="CFD result — NACA0012 dynamic stall: lift and pitching-moment hysteresis against experiment" loading="lazy" />
+          <figcaption>NACA0012 dynamic stall — lift and pitching-moment hysteresis vs experiment</figcaption>
+        </figure>
+        <figure class="photo">
+          <img src="/cfd/airfoil-s809-dynamic-stall.jpg" alt="CFD result — S809 dynamic stall: lift curve against experimental reference data" loading="lazy" />
+          <figcaption>S809 dynamic stall — lift curve vs experimental reference data</figcaption>
         </figure>
       </div>
     </div>
