@@ -1,5 +1,7 @@
 ---
 import '../styles/global.css';
+const { title = 'Ying Xu — Wind Energy & Power Systems', description = 'Ying Xu — B.Eng. candidate at North China Electric Power University. Research and projects in wind energy, power systems, CFD, and embedded measurement.', path = '/' } = Astro.props;
+const canonical = new URL(path, Astro.site);
 ---
 
 <!doctype html>
@@ -7,8 +9,14 @@ import '../styles/global.css';
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ying Xu — Wind Energy &amp; Power Systems</title>
-    <meta name="description" content="Ying Xu — B.Eng. candidate in New Energy Science and Engineering (wind-energy focus) at North China Electric Power University. Prospective PhD student in power systems and renewable energy integration." />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <meta name="color-scheme" content="light dark" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
     <link rel="icon" href="/favicon.ico" sizes="48x48" />
     <link rel="icon" href="/icon-192.png" type="image/png" sizes="192x192" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
@@ -26,19 +34,30 @@ import '../styles/global.css';
     </script>
   </head>
   <body>
-    <nav class="topbar">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <nav class="topbar" aria-label="Main navigation">
       <div class="inner">
         <a class="brand" href="/">Ying<b>Xu</b></a>
         <span class="sp"></span>
-        <button class="tbtn" id="theme-toggle" aria-label="Toggle dark mode">
-          <svg id="icon-moon" viewBox="0 0 16 16"><path d="M9.598 1.591a.75.75 0 0 1 .313.931 7.5 7.5 0 0 0 1.033 6.538.75.75 0 0 1-.495 1.106 7.5 7.5 0 0 1-6.508-1.46.75.75 0 0 1-.225-.907A9.5 9.5 0 0 1 8.595 1.1a.75.75 0 0 1 1.003.491z"/></svg>
-          <svg id="icon-sun" viewBox="0 0 16 16" style="display:none"><path d="M8 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/></svg>
+        <div class="nav-links"><a href="/#research">Research</a><a href="/#projects">Projects</a><a href="/#contact">Contact</a></div>
+        <button class="tbtn" id="theme-toggle" type="button" aria-label="Switch to dark theme" hidden>
+          <svg id="icon-moon" aria-hidden="true" viewBox="0 0 16 16"><path d="M9.598 1.591a.75.75 0 0 1 .313.931 7.5 7.5 0 0 0 1.033 6.538.75.75 0 0 1-.495 1.106 7.5 7.5 0 0 1-6.508-1.46.75.75 0 0 1-.225-.907A9.5 9.5 0 0 1 8.595 1.1a.75.75 0 0 1 1.003.491z"/></svg>
+          <svg id="icon-sun" aria-hidden="true" viewBox="0 0 16 16" style="display:none"><path d="M8 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/></svg>
           <span id="theme-label">Dark</span>
         </button>
       </div>
     </nav>
     <slot />
-    <button id="to-top" aria-label="Back to top" title="Back to top">↑</button>
+    <button id="to-top" type="button" aria-label="Back to top" title="Back to top">↑</button>
+    <dialog id="image-viewer" aria-labelledby="viewer-caption">
+      <div class="viewer-toolbar">
+        <span id="viewer-count" aria-live="polite"></span>
+        <a id="viewer-original" target="_blank" rel="noopener">Open original ↗</a>
+        <button id="viewer-close" type="button" aria-label="Close image viewer">Close ×</button>
+      </div>
+      <div class="viewer-frame"><img id="viewer-image" alt="" /></div>
+      <div class="viewer-bottom"><button id="viewer-prev" type="button" aria-label="Previous image">←</button><p id="viewer-caption" aria-live="polite"></p><button id="viewer-next" type="button" aria-label="Next image">→</button></div>
+    </dialog>
     <script>
       document.addEventListener('DOMContentLoaded', () => {
         const btn = document.getElementById('theme-toggle');
@@ -50,14 +69,16 @@ import '../styles/global.css';
           moon.style.display = dark ? 'none' : '';
           sun.style.display = dark ? '' : 'none';
           label.textContent = dark ? 'Light' : 'Dark';
+          btn.setAttribute('aria-label', dark ? 'Switch to light theme' : 'Switch to dark theme');
         };
         sync();
+        btn.hidden = false;
 
         // Follow the device's current color scheme while no explicit
         // preference is saved; a saved choice always wins.
         const mq = window.matchMedia('(prefers-color-scheme: dark)');
         const followDevice = () => {
-          try { if (localStorage.getItem('theme') !== null) return; } catch (e) {}
+          try { if (['light', 'dark'].includes(localStorage.getItem('theme'))) return; } catch (e) {}
           document.documentElement.dataset.theme = mq.matches ? 'dark' : 'light';
           sync();
         };
@@ -82,8 +103,49 @@ import '../styles/global.css';
         window.addEventListener('scroll', onScroll, { passive: true });
         onScroll();
         toTop.addEventListener('click', () => {
-          window.scrollTo({ top: 0, behavior: 'smooth' });
+          window.scrollTo({ top: 0, behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' });
         });
+
+        const viewer = document.querySelector<HTMLDialogElement>('#image-viewer');
+        const image = document.querySelector<HTMLImageElement>('#viewer-image');
+        const caption = document.getElementById('viewer-caption');
+        const count = document.getElementById('viewer-count');
+        const original = document.querySelector<HTMLAnchorElement>('#viewer-original');
+        const previous = document.getElementById('viewer-prev');
+        const next = document.getElementById('viewer-next');
+        let links: HTMLAnchorElement[] = [];
+        let current = 0;
+        const show = (index: number) => {
+          current = (index + links.length) % links.length;
+          const link = links[current];
+          const source = link.querySelector('img');
+          image.src = link.href;
+          image.alt = source.alt;
+          original.href = link.href;
+          caption.textContent = link.closest('figure')?.querySelector('figcaption')?.textContent || source.alt;
+          count.textContent = `${current + 1} / ${links.length}`;
+          previous.hidden = next.hidden = links.length < 2;
+        };
+        document.querySelectorAll<HTMLAnchorElement>('.photo-link').forEach(link => {
+          link.addEventListener('click', event => {
+            if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey || event.button !== 0 || typeof viewer.showModal !== 'function') return;
+            event.preventDefault();
+            const group = link.closest('.photos') || link.closest('figure');
+            links = Array.from(group.querySelectorAll<HTMLAnchorElement>('.photo-link'));
+            show(links.indexOf(link));
+            viewer.showModal();
+            document.body.classList.add('viewer-open');
+          });
+        });
+        document.getElementById('viewer-close').addEventListener('click', () => viewer.close());
+        viewer.addEventListener('close', () => document.body.classList.remove('viewer-open'));
+        viewer.addEventListener('click', event => { if (event.target === viewer) viewer.close(); });
+        viewer.addEventListener('keydown', event => {
+          if (event.key === 'ArrowRight') { event.preventDefault(); show(current + 1); }
+          if (event.key === 'ArrowLeft') { event.preventDefault(); show(current - 1); }
+        });
+        previous.addEventListener('click', () => show(current - 1));
+        next.addEventListener('click', () => show(current + 1));
       });
     </script>
   </body>

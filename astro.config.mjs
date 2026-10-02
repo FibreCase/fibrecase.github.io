@@ -5,5 +5,5 @@ import { defineConfig } from 'astro/config';
 export default defineConfig({
   site: 'https://fibrecase.github.io',
   outDir: 'dist',
-  // Static output: every page (/, /zh) is pre-rendered at build time.
+  // Static output: the profile and CFD case notes are pre-rendered at build time.
 });

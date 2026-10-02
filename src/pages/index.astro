@@ -3,17 +3,18 @@ import Base from '../layouts/Base.astro';
 ---
 
 <Base>
+<main id="main-content" tabindex="-1">
 
 <div class="hero">
   <div class="page">
-    <p class="kicker" data-rise style="--d:.05s"><span class="dot"></span>Prospective PhD Student · Fall 2027</p>
-    <h1 data-rise style="--d:.15s">Ying Xu</h1>
-    <p class="tag" data-rise style="--d:.3s">
+    <p class="kicker"><span class="dot"></span>Prospective PhD Student · Fall 2027</p>
+    <h1>Ying Xu</h1>
+    <p class="tag">
       <b>Power systems</b> and <b>renewable energy integration</b>.
       B.Eng. candidate in New Energy Science and Engineering (wind-energy focus) at
       North China Electric Power University.
     </p>
-    <div class="actions" data-rise style="--d:.42s">
+    <div class="actions">
       <a href="mailto:fibrecase@ncepu.edu.cn">Email</a>
       <a href="https://github.com/FibreCase" target="_blank" rel="noopener">GitHub</a>
       <a href="/CV-YingXu-27fallPhD.pdf">CV (PDF)</a>
@@ -23,21 +24,21 @@ import Base from '../layouts/Base.astro';
 
 <div class="page">
 
-  <section id="about" data-rise>
+  <section id="about">
     <h2><span class="no">01</span>About<span class="rule"></span></h2>
     <p>
       I am finishing my B.Eng. in New Energy Science and Engineering (wind-energy track) at
       North China Electric Power University (expected June 2027), with an average of 82.9/100 and
-      strong results in my wind-engineering specialization — Turbine Aerodynamics and
-      Wind Resource Measurement &amp; Assessment (95/100), Numerical Simulation (90).
+      strong results in my wind-engineering specialization — Wind Turbine Aerodynamics (Excellent),
+      Wind Resource Measurement &amp; Assessment (95/100), and Numerical Simulation (90/100).
     </p>
     <p>
       I am currently working on a <b>multi-timescale model of a direct-drive PMSG wind turbine</b> —
       a funded project at the National Key Laboratory of Renewable Energy Electric Systems,
-      building reduced-order average-value models benchmarked against WECC Type 4 and
+      developing reduced-order average-value models for comparison with WECC Type 4 and
       IEC 61400-27-1 reference models for system-level grid-integration simulation. Before that,
       I completed <b>CFD simulations</b> of wind-turbine-relevant external flows
-      (ANSYS Fluent, with selected cases cross-verified in OpenFOAM). My embedded and hardware
+      (ANSYS Fluent, with the cylinder-flow case also run in OpenFOAM). My embedded and hardware
       background — including a <b>National First Prize</b> in the China Undergraduate
       Electronic Design Contest (power-monitoring circuit design and system integration) —
       backs the research with strong implementation ability, and I maintain a small portfolio
@@ -47,7 +48,7 @@ import Base from '../layouts/Base.astro';
     </p>
   </section>
 
-  <section id="research-interests" data-rise>
+  <section id="research-interests">
     <h2><span class="no">02</span>Research Interests<span class="rule"></span></h2>
     <div class="chiprow">
       <span class="chip">Wind-energy integration</span>
@@ -56,68 +57,76 @@ import Base from '../layouts/Base.astro';
     </div>
   </section>
 
-  <section id="education" data-rise>
+  <section id="education">
     <h2><span class="no">03</span>Education<span class="rule"></span></h2>
     <div class="item">
       <div class="meta"><h3>North China Electric Power University</h3><span class="dates">2023.09 – 2027.06 (expected)</span></div>
       <p class="sub">B.Eng. in New Energy Science and Engineering (wind-energy focus) — Beijing</p>
       <ul>
         <li>GPA: 3.29/5.00; calculated weighted average: 82.9/100</li>
-        <li>Selected coursework: Wind Resources Measurement and Assessment (95/100), Numerical Simulation (90/100), Reliability Engineering (90/100), Wind Turbine Aerodynamics (Excellent)</li>
+        <li>Selected coursework: Wind Resource Measurement and Assessment (95/100), Numerical Simulation (90/100), Reliability Engineering (90/100), Wind Turbine Aerodynamics (Excellent)</li>
         <li>Honors: University Merit Student; 2nd-Class University Scholarship; Science &amp; Technology Innovation Scholarship</li>
       </ul>
     </div>
   </section>
 
-  <section id="research" data-rise>
+  <section id="research">
     <h2><span class="no">04</span>Research Experience<span class="rule"></span></h2>
     <div class="item">
       <div class="meta"><h3>Direct-Drive PMSG Wind-Turbine Multi-Timescale Modeling &amp; Simulation (in progress)</h3><span class="dates">2026.09 – present</span></div>
-      <p class="sub">National Key Laboratory of Renewable Energy Electric Systems, NCEPU — funded undergraduate research project, sole researcher (advised by Dong Zhao, Senior Engineer)</p>
+      <p class="sub">National Key Laboratory of Renewable Energy Electric Systems, NCEPU — funded undergraduate research project, sole researcher (advised by Dong Zhao, Engineer)</p>
       <ul>
         <li>Hierarchical multi-timescale model of a direct-drive PMSG wind turbine — slow layer (rotor aerodynamics, drivetrain, pitch control; seconds scale), middle layer (DC-link voltage / power / MPPT; hundreds of ms), fast layer (current control, electromagnetic dynamics; ms scale) — for system-level grid-integration simulation on the lab's in-house power-system platform</li>
-        <li>Reduced-order average-value modeling via sensitivity analysis and singular-perturbation order reduction, benchmarked against WECC Type 4 and IEC 61400-27-1 (Type 4A/4B) reference models</li>
+        <li>Planned sensitivity analysis and singular-perturbation model reduction, with validation against WECC Type 4 and IEC 61400-27-1 (Type 4A/4B) reference models</li>
         <li>Completed: systematic literature review (12 papers on Type 4/4A/4B standards, model-order reduction, LVRT, and primary-frequency-response control) and the overall modeling scheme; ongoing: model derivation, parameter tables, platform implementation, and wind-speed-step / voltage-sag / frequency-disturbance case studies</li>
       </ul>
     </div>
-    <div class="item">
-      <div class="meta"><h3>CFD Simulation Researcher — Wind Power Research Center</h3><span class="dates">2026.07 – 2026.08</span></div>
-      <p class="sub">Independent research project under a PhD researcher's guidance</p>
+    <div class="item" id="cfd">
+      <div class="meta"><h3>CFD of Cylinder Vibration &amp; Airfoil Dynamic Stall</h3><span class="dates">2026.07 – 2026.08</span></div>
+      <p class="sub">Wind Power Research Center, NCEPU — independently completed under doctoral-student supervision</p>
+      <p>Five types of two-dimensional cases: cylinder flow and vortex-induced vibration, NACA0012 static aerodynamics and dynamic stall, and S809 dynamic stall. Used <b>ANSYS Fluent</b> as the main solver and ran cylinder flow in <b>OpenFOAM v2512 and v8</b> using Gmsh and ParaView.</p>
       <ul>
-        <li>External-flow simulations of wind-turbine-relevant aerodynamics — cylinder flow, vortex-induced vibration, and static/dynamic stall of NACA0012 and S809 airfoils — in <b>ANSYS Fluent</b>, with the cylinder-flow case reproduced in OpenFOAM</li>
-        <li>Responsible for mesh generation, turbulence-model selection, and inflation-layer setup; post-processed force coefficients and stall behaviour, comparing simulated lift and pitching-moment hysteresis against experimental reference data; open-source case: <a class="ref" href="https://github.com/FibreCase/openfoam-cylinder2D" target="_blank" rel="noopener">github.com/FibreCase/openfoam-cylinder2D</a></li>
-        <li>Documented the five case studies in a technical presentation (August 2026)</li>
+        <li><b>Vortex shedding:</b> at Re = 100, captured an alternating vortex street and periodic lift and drag; dimensionless dominant frequencies were approximately <b>0.166 and 0.334</b>, with drag oscillating at about twice the lift frequency.</li>
+        <li><b>Cylinder vibration:</b> compared displacement histories and spectra across reduced velocities U* = 7, 8, 9, and 11. Reported transverse amplitudes were approximately 0.42 at U* = 7 and 0.30 at U* = 9; the U* = 11 response decayed over the displayed interval.</li>
+        <li><b>Static airfoil loads:</b> with SST k–ω, obtained NACA0012 lift coefficients of approximately <b>1.075 at 10° and 1.469 at 15°</b>; at 20°, lift decreased and force coefficients remained unsteady.</li>
+        <li><b>Dynamic stall:</b> compared lift and pitching-moment hysteresis with experimental reference data. NACA0012 (Transition SST) captured the loop shape with deviations near stall and during pitch-down; S809 (GEKO k–ω) followed the pitch-up lift trend but underpredicted lift at intermediate angles during pitch-down.</li>
       </ul>
-      <div class="photos two wide">
-        <figure class="photo">
-          <img src="/cfd/cylinder-flow.jpg" alt="CFD result — flow around a circular cylinder at Re 100, showing the periodic vortex street and lift/drag histories" loading="lazy" />
-          <figcaption>Circular cylinder, Re 100 — periodic vortex street; lift/drag histories</figcaption>
-        </figure>
-        <figure class="photo">
-          <img src="/cfd/cylinder-openfoam.jpg" alt="CFD result — cylinder flow reproduced in OpenFOAM with the Gmsh / OpenFOAM / ParaView workflow" loading="lazy" />
-          <figcaption>Cylinder flow reproduced in OpenFOAM — Gmsh / OpenFOAM / ParaView workflow</figcaption>
-        </figure>
-        <figure class="photo">
-          <img src="/cfd/cylinder-viv.jpg" alt="CFD result — vortex-induced vibration of a cylinder: response amplitude across reduced velocities" loading="lazy" />
-          <figcaption>Vortex-induced vibration — response amplitude, U = 7…11</figcaption>
-        </figure>
-        <figure class="photo">
-          <img src="/cfd/airfoil-naca0012-static.jpg" alt="CFD result — NACA0012 static aerodynamics at 10, 15 and 20 degrees with SST k-omega" loading="lazy" />
-          <figcaption>NACA0012 static — lift at 10° / 15° / 20°, SST k-ω</figcaption>
-        </figure>
-        <figure class="photo">
-          <img src="/cfd/airfoil-naca0012-dynamic-stall.jpg" alt="CFD result — NACA0012 dynamic stall: lift and pitching-moment hysteresis against experiment" loading="lazy" />
-          <figcaption>NACA0012 dynamic stall — lift and pitching-moment hysteresis vs experiment</figcaption>
-        </figure>
-        <figure class="photo">
-          <img src="/cfd/airfoil-s809-dynamic-stall.jpg" alt="CFD result — S809 dynamic stall: lift curve against experimental reference data" loading="lazy" />
-          <figcaption>S809 dynamic stall — lift curve vs experimental reference data</figcaption>
-        </figure>
-      </div>
+      <p class="project-links"><a class="ref" href="https://github.com/FibreCase/openfoam-cylinder2D" target="_blank" rel="noopener">OpenFOAM case ↗</a> <span aria-hidden="true">·</span> <a class="ref" href="/cfd-summary/">Case notes &amp; references</a></p>
+      <details class="research-details">
+        <summary>View simulation figures and reference context</summary>
+        <p class="sub">August 2026 presentation. The figures combine project results with reference curves. These are literature-based simulation cases; experimental data come from published sources.</p>
+        <div class="photos two wide">
+          <figure class="photo">
+            <a class="photo-link" href="/cfd/cylinder-flow.jpg" aria-label="Enlarge: CFD result — flow around a circular cylinder at Re 100, showing the periodic vortex street and lift/drag histories"><img src="/cfd/cylinder-flow.jpg" alt="CFD result — flow around a circular cylinder at Re 100, showing the periodic vortex street and lift/drag histories" width="1600" height="900" loading="lazy" decoding="async" /></a>
+            <figcaption>Circular cylinder, Re 100 — periodic vortex street; lift/drag histories</figcaption>
+          </figure>
+          <figure class="photo">
+            <a class="photo-link" href="/cfd/cylinder-openfoam.jpg" aria-label="Enlarge: CFD result — cylinder flow reproduced in OpenFOAM with the Gmsh / OpenFOAM / ParaView workflow"><img src="/cfd/cylinder-openfoam.jpg" alt="CFD result — cylinder flow reproduced in OpenFOAM with the Gmsh / OpenFOAM / ParaView workflow" width="1600" height="900" loading="lazy" decoding="async" /></a>
+            <figcaption>Cylinder flow reproduced in OpenFOAM — Gmsh / OpenFOAM / ParaView workflow</figcaption>
+          </figure>
+          <figure class="photo">
+            <a class="photo-link" href="/cfd/cylinder-viv.jpg" aria-label="Enlarge: CFD result — vortex-induced vibration of a cylinder: response amplitude across reduced velocities"><img src="/cfd/cylinder-viv.jpg" alt="CFD result — vortex-induced vibration of a cylinder: response amplitude across reduced velocities" width="1600" height="900" loading="lazy" decoding="async" /></a>
+            <figcaption>Cylinder vibration, Re = 100 — response histories at reduced velocities U* = 7, 8, 9, 11</figcaption>
+          </figure>
+          <figure class="photo">
+            <a class="photo-link" href="/cfd/airfoil-naca0012-static.jpg" aria-label="Enlarge: CFD result — NACA0012 static aerodynamics at 10, 15 and 20 degrees with SST k-omega"><img src="/cfd/airfoil-naca0012-static.jpg" alt="CFD result — NACA0012 static aerodynamics at 10, 15 and 20 degrees with SST k-omega" width="1600" height="900" loading="lazy" decoding="async" /></a>
+            <figcaption>NACA0012 static — lift at 10° / 15° / 20°, SST k-ω</figcaption>
+          </figure>
+          <figure class="photo">
+            <a class="photo-link" href="/cfd/airfoil-naca0012-dynamic-stall.jpg" aria-label="Enlarge: CFD result — NACA0012 dynamic stall: lift and pitching-moment hysteresis against experiment"><img src="/cfd/airfoil-naca0012-dynamic-stall.jpg" alt="CFD result — NACA0012 dynamic stall: lift and pitching-moment hysteresis against experiment" width="1600" height="900" loading="lazy" decoding="async" /></a>
+            <figcaption>NACA0012 dynamic stall — load hysteresis; deviations near stall and during pitch-down</figcaption>
+          </figure>
+          <figure class="photo">
+            <a class="photo-link" href="/cfd/airfoil-s809-dynamic-stall.jpg" aria-label="Enlarge: CFD result — S809 dynamic stall: lift curve against experimental reference data"><img src="/cfd/airfoil-s809-dynamic-stall.jpg" alt="CFD result — S809 dynamic stall: lift curve against experimental reference data" width="1600" height="900" loading="lazy" decoding="async" /></a>
+            <figcaption>S809 dynamic stall — pitch-up trend captured; lift underpredicted during pitch-down</figcaption>
+          </figure>
+        </div>
+        <p class="reference-note">Reference context: Xintao Li, <cite>Study on the Mechanism of Several Complex Phenomena in Flow-Induced Vibration of Bluff Bodies</cite> (2019), and Jingge Quan, <cite>Study on Aeroelastic Analysis in Separated Flows</cite> (2019), §§3.2.1 and 3.3. The cylinder cases shown here use Re = 100; Li’s §4.3 addresses subcritical Reynolds numbers below approximately 47. Airfoil settings also differ from the source cases.</p>
+      </details>
     </div>
   </section>
 
-  <section id="leadership" data-rise>
+  <section id="leadership">
     <h2><span class="no">05</span>Leadership<span class="rule"></span></h2>
     <div class="item">
       <div class="lead-row">
@@ -130,14 +139,14 @@ import Base from '../layouts/Base.astro';
           </ul>
         </div>
         <figure class="photo lead-photo">
-          <img src="/leadership/speech.jpg" alt="Ying Xu giving a talk at the MOS Innovation Lab" loading="lazy" />
+          <a class="photo-link" href="/leadership/speech.jpg" aria-label="Enlarge: Ying Xu giving a talk at the MOS Innovation Lab"><img src="/leadership/speech.jpg" alt="Ying Xu giving a talk at the MOS Innovation Lab" width="1080" height="1630" loading="lazy" decoding="async" /></a>
           <figcaption>Giving a talk at the MOS Innovation Lab</figcaption>
         </figure>
       </div>
       </div>
   </section>
 
-  <section id="projects" data-rise>
+  <section id="projects">
     <h2><span class="no">06</span>Selected Projects<span class="rule"></span></h2>
 
     <div class="item">
@@ -151,15 +160,15 @@ import Base from '../layouts/Base.astro';
       </ul>
       <div class="photos">
         <figure class="photo">
-          <img src="/nuedc/bench.jpg" alt="Contest workstation with the vision system running on screen" loading="lazy" />
+          <a class="photo-link" href="/nuedc/bench.jpg" aria-label="Enlarge: Contest workstation with the vision system running on screen"><img src="/nuedc/bench.jpg" alt="Contest workstation with the vision system running on screen" width="1600" height="1200" loading="lazy" decoding="async" /></a>
           <figcaption>Contest workstation, 2025 — vision pipeline running live</figcaption>
         </figure>
         <figure class="photo">
-          <img src="/nuedc/finals-team.jpg" alt="Team at the national finals holding the C-problem sign" loading="lazy" />
+          <a class="photo-link" href="/nuedc/finals-team.jpg" aria-label="Enlarge: Team at the national finals holding the C-problem sign"><img src="/nuedc/finals-team.jpg" alt="Team at the national finals holding the C-problem sign" width="1600" height="1200" loading="lazy" decoding="async" /></a>
           <figcaption>National finals, Dalian · 2025 — Ying Xu, first from the right</figcaption>
         </figure>
         <figure class="photo">
-          <img src="/nuedc/finals-booth.jpg" alt="Project booth at the national finals with the poster and hardware" loading="lazy" />
+          <a class="photo-link" href="/nuedc/finals-booth.jpg" aria-label="Enlarge: Project booth at the national finals with the poster and hardware"><img src="/nuedc/finals-booth.jpg" alt="Project booth at the national finals with the poster and hardware" width="1600" height="1200" loading="lazy" decoding="async" /></a>
           <figcaption>Project booth — “Monocular-Vision Target Measurement Device” — Ying Xu, first from the right</figcaption>
         </figure>
       </div>
@@ -174,11 +183,11 @@ import Base from '../layouts/Base.astro';
       </ul>
       <div class="photos two">
         <figure class="photo">
-          <img src="/edc2024/finals-ti-booth.jpg" alt="Texas Instruments exhibition at the national finals" loading="lazy" />
+          <a class="photo-link" href="/edc2024/finals-ti-booth.jpg" aria-label="Enlarge: Texas Instruments exhibition at the national finals"><img src="/edc2024/finals-ti-booth.jpg" alt="Texas Instruments exhibition at the national finals" width="1600" height="1200" loading="lazy" decoding="async" /></a>
           <figcaption>TI exhibition, national finals · Hangzhou — Ying Xu, first from the right</figcaption>
         </figure>
         <figure class="photo">
-          <img src="/edc2024/finals-banner.jpg" alt="2024 TI Cup analog design finals venue banner in Hangzhou" loading="lazy" />
+          <a class="photo-link" href="/edc2024/finals-banner.jpg" aria-label="Enlarge: 2024 TI Cup analog design finals venue banner in Hangzhou"><img src="/edc2024/finals-banner.jpg" alt="2024 TI Cup analog design finals venue banner in Hangzhou" width="1600" height="1200" loading="lazy" decoding="async" /></a>
           <figcaption>National finals venue · 2024 — Ying Xu, first from the right</figcaption>
         </figure>
       </div>
@@ -195,11 +204,11 @@ import Base from '../layouts/Base.astro';
       </ul>
       <div class="photos two">
         <figure class="photo">
-          <img src="/edc2024/beijing-bench.jpg" alt="Oscilloscope and LED indicator at the evaluation bench" loading="lazy" />
+          <a class="photo-link" href="/edc2024/beijing-bench.jpg" aria-label="Enlarge: Oscilloscope and LED indicator at the evaluation bench"><img src="/edc2024/beijing-bench.jpg" alt="Oscilloscope and LED indicator at the evaluation bench" width="1600" height="1200" loading="lazy" decoding="async" /></a>
           <figcaption>Test bench, evaluation day · 2024</figcaption>
         </figure>
         <figure class="photo">
-          <img src="/edc2024/beijing-venue.jpg" alt="TI Cup 2024 Beijing contest evaluation venue" loading="lazy" />
+          <a class="photo-link" href="/edc2024/beijing-venue.jpg" aria-label="Enlarge: TI Cup 2024 Beijing contest evaluation venue"><img src="/edc2024/beijing-venue.jpg" alt="TI Cup 2024 Beijing contest evaluation venue" width="3984" height="2848" loading="lazy" decoding="async" /></a>
           <figcaption>TI Cup 2024 Beijing contest — evaluation venue — Ying Xu, first from the right</figcaption>
         </figure>
       </div>
@@ -211,7 +220,7 @@ import Base from '../layouts/Base.astro';
       <ul>
         <li>End-to-end power-monitoring system: custom open-source PCB, ESP32-C3 firmware (C/ESP-IDF) sampling an INA226 at 10 Hz over a custom 20-byte TCP wire protocol, with adaptive 10 Hz / 0.1 Hz sampling by viewer presence</li>
         <li><b>Dual-path overcurrent protection</b> (hardware ALERT-pin comparator + independent backend threshold) with per-event time/voltage/current/power logging</li>
-        <li><b>Dual-slot OTA with automatic rollback</b> and a custom two-slot partition table — a bad update cannot brick a deployed device</li>
+        <li><b>Dual-slot OTA with automatic rollback</b> and a custom two-slot partition table — supports recovery when a firmware update fails</li>
         <li>Python backend (FastAPI, async TCP ingest, SQLite persistence, WebSocket live broadcast) + web dashboard — <a class="ref" href="https://github.com/FibreCase/dynamic-power-monitor" target="_blank" rel="noopener">github.com/FibreCase/dynamic-power-monitor</a> · <a class="ref" href="https://oshwhub.com/fibrecase/project_mfgowtnz" target="_blank" rel="noopener">oshwhub.com/fibrecase/project_mfgowtnz</a></li>
       </ul>
     </div>
@@ -233,7 +242,7 @@ import Base from '../layouts/Base.astro';
     </div>
   </section>
 
-  <section id="awards" data-rise>
+  <section id="awards">
     <h2><span class="no">07</span>Awards &amp; Honors<span class="rule"></span></h2>
     <div class="award"><span class="what"><b>National First Prize</b> (nominated for the TI Cup), China Undergraduate Electronic Design Contest</span><span class="when">2025</span></div>
     <div class="award"><span class="what"><b>National Third Prize</b>, China Undergraduate Electronic Design Contest — TI Cup Analog Electronic System Design</span><span class="when">2024</span></div>
@@ -241,36 +250,37 @@ import Base from '../layouts/Base.astro';
     <div class="award"><span class="what">University Merit Student; 2nd-Class University Scholarship; Science &amp; Technology Innovation Scholarship</span><span class="when">NCEPU</span></div>
   </section>
 
-  <section id="skills" data-rise>
+  <section id="skills">
     <h2><span class="no">08</span>Skills<span class="rule"></span></h2>
     <table class="skills">
-      <tr><td>Simulation</td><td>ANSYS Fluent (2D external flow); OpenFOAM (basic)</td></tr>
-      <tr><td>Programming</td><td>Python, C; MATLAB (basic)</td></tr>
-      <tr><td>Embedded</td><td>STM32 / ESP32 (ADC, DMA, UART, SPI, I²C, PWM), Rockchip embedded Linux, MIPI display</td></tr>
-      <tr><td>Tools</td><td>Git, Docker, Linux, PCB design, AutoCAD, SolidWorks</td></tr>
-      <tr><td>Languages</td><td>English — IELTS Academic 7.0 (September 2026)</td></tr>
+      <caption class="sr-only">Technical skills and languages</caption>
+      <tr><th scope="row">Simulation</th><td>ANSYS Fluent (2D external flow); OpenFOAM (basic); Gmsh; ParaView</td></tr>
+      <tr><th scope="row">Programming</th><td>Python, C; MATLAB (basic)</td></tr>
+      <tr><th scope="row">Embedded</th><td>STM32 / ESP32 (ADC, DMA, UART, SPI, I²C, PWM), Rockchip embedded Linux, MIPI display</td></tr>
+      <tr><th scope="row">Tools</th><td>Git, Docker, Linux, PCB design, AutoCAD, SolidWorks</td></tr>
+      <tr><th scope="row">Languages</th><td>English — IELTS Academic 7.0 (September 2026); Mandarin Chinese — native</td></tr>
     </table>
   </section>
 
-  <section id="beyond" data-rise>
+  <section id="beyond">
     <h2><span class="no">09</span>Beyond the Lab<span class="rule"></span></h2>
     <div class="photos">
       <figure class="photo">
-        <img src="/life/hongkong-2025.jpg" alt="Victoria Peak overlooking Victoria Harbour, Hong Kong" loading="lazy" />
+        <a class="photo-link" href="/life/hongkong-2025.jpg" aria-label="Enlarge: Victoria Peak overlooking Victoria Harbour, Hong Kong"><img src="/life/hongkong-2025.jpg" alt="Victoria Peak overlooking Victoria Harbour, Hong Kong" width="1600" height="1200" loading="lazy" decoding="async" /></a>
         <figcaption>Victoria Peak, Hong Kong · 2025</figcaption>
       </figure>
       <figure class="photo">
-        <img src="/life/sapporo-teine-2026.jpg" alt="At Sapporo Teine ski area, Japan, overlooking the snowy plain" loading="lazy" />
+        <a class="photo-link" href="/life/sapporo-teine-2026.jpg" aria-label="Enlarge: At Sapporo Teine ski area, Japan, overlooking the snowy plain"><img src="/life/sapporo-teine-2026.jpg" alt="At Sapporo Teine ski area, Japan, overlooking the snowy plain" width="1600" height="1200" loading="lazy" decoding="async" /></a>
         <figcaption>Sapporo Teine, Japan · 2026</figcaption>
       </figure>
       <figure class="photo">
-        <img src="/life/sichuan-2026-02.jpg" alt="Visiting a wind farm in Sichuan" loading="lazy" />
+        <a class="photo-link" href="/life/sichuan-2026-02.jpg" aria-label="Enlarge: Visiting a wind farm in Sichuan"><img src="/life/sichuan-2026-02.jpg" alt="Visiting a wind farm in Sichuan" width="1600" height="1366" loading="lazy" decoding="async" /></a>
         <figcaption>Wind farm, Sichuan · 2026</figcaption>
       </figure>
     </div>
   </section>
 
-  <section id="contact" data-rise>
+  <section id="contact">
     <h2><span class="no">10</span>Contact<span class="rule"></span></h2>
     <p>
       <b>Email:</b> <a class="ref" href="mailto:fibrecase@ncepu.edu.cn">fibrecase@ncepu.edu.cn</a> · <a class="ref" href="mailto:fibrecase@163.com">fibrecase@163.com</a><br>
@@ -284,6 +294,8 @@ import Base from '../layouts/Base.astro';
   </section>
 
 </div>
+
+</main>
 
 <footer>
   <div class="page">

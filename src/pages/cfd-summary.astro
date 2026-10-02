@@ -1,0 +1,43 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base title="CFD Case Notes — Ying Xu" description="Results and reference context for Ying Xu's 2026 cylinder-flow, vortex-induced-vibration, and airfoil dynamic-stall simulations." path="/cfd-summary/">
+  <main id="main-content" class="page case-notes" tabindex="-1">
+    <p class="project-links"><a class="ref" href="/#research">← Research experience</a></p>
+    <h1>Cylinder Vibration &amp; Airfoil Dynamic Stall</h1>
+    <p class="sub">CFD case notes · July–August 2026 · North China Electric Power University</p>
+    <p>I independently completed five types of two-dimensional simulation cases under doctoral-student supervision, using ANSYS Fluent as the main solver. I also ran the cylinder-flow case in OpenFOAM v2512 and v8, with Gmsh for meshing and ParaView for visualization.</p>
+    <p>The August 3, 2026 presentation combines my simulation results with reference curves and published experimental data. These notes report the results shown in that presentation; they do not represent a new experimental study or a reanalysis of raw solver data.</p>
+
+    <section>
+      <h2>Case results<span class="rule"></span></h2>
+      <h3>Fixed cylinder: shedding and force spectra</h3>
+      <p>At Re = 100 and Ma = 0.1, the laminar calculation showed alternating vortex shedding and periodic lift and drag after the initial transient. Dimensionless dominant frequencies fD/U∞ were approximately 0.166 for lift and 0.334 for drag, compared with reference values of 0.166 and 0.329. The lift frequency corresponds to a vortex-shedding Strouhal number of approximately 0.166.</p>
+      <h3>Cylinder vortex-induced vibration</h3>
+      <p>Compared displacement histories and spectra at reduced velocities U* = 7, 8, 9, and 11, at Re = 100 and Ma = 0.1. Reported transverse amplitudes were approximately 0.42 at U* = 7 and 0.30 at U* = 9; the U* = 11 response decayed over the displayed interval. Here U* = U∞/(fₛD), rather than a dimensional inlet speed. The presentation does not explicitly label the displacement normalization, so the amplitude values are retained as reported.</p>
+      <h3>NACA0012 static aerodynamics</h3>
+      <p>With Ma = 0.15 and SST k–ω, the reported lift coefficients were approximately 1.075 at 10° and 1.469 at 15°. At 20°, lift decreased and force coefficients continued to oscillate, showing that fixed incidence can still produce unsteady post-stall loads.</p>
+      <h3>NACA0012 dynamic stall</h3>
+      <p>At Re = 3.75 × 10⁶ and Ma = 0.293, using Transition SST, lift and pitching moment showed clear hysteresis. The CFD captured the loop shape, with deviations from experimental reference data near stall and during pitch-down. The presentation also used flow-field illustrations to connect separation and vortex evolution with changing loads.</p>
+      <h3>S809 dynamic stall</h3>
+      <p>At an inlet speed of 32 m/s, using GEKO k–ω, the computed lift followed the experimental pitch-up trend but underpredicted lift at intermediate angles during pitch-down. The comparison figure also includes reference curves labeled Ramsay (1995), Gupta (2016), and Ge (2021).</p>
+    </section>
+
+    <section>
+      <h2>Reference context<span class="rule"></span></h2>
+      <ul>
+        <li>Xintao Li, <cite>Study on the Mechanism of Several Complex Phenomena in Flow-Induced Vibration of Bluff Bodies</cite>, doctoral dissertation, Northwestern Polytechnical University, June 2019. The fixed-cylinder reference figures appear in §2.2.4. The project also drew on §4.3, which studies subcritical-Reynolds-number vortex-induced vibration.</li>
+        <li>Jingge Quan, <cite>Study on Aeroelastic Analysis in Separated Flows</cite>, doctoral dissertation, Northwestern Polytechnical University, March 2019. Relevant sections: §3.2.1, airfoil dynamic-stall validation; §3.3, high-incidence separated-flow calculations.</li>
+      </ul>
+      <p>The presented cylinder simulations use Re = 100, whereas Li’s §4.3 studies subcritical conditions below approximately Re = 47. Quan’s dynamic-stall validation uses Re = 3.45 × 10⁶ and Ma = 0.283; its high-incidence case uses Re = 6 × 10⁶ and the S–A model. My airfoil settings differ, so these are related literature-based cases rather than exact replications of every source parameter.</p>
+      <p>The static NACA0012 and S809 slides label Reynolds number as “10e6.” This notation requires clarification against the original case files before an unambiguous value can be reported. Full pitching-motion parameters, systematic mesh/time-step convergence, and quantitative error metrics are not included in the available presentation.</p>
+    </section>
+
+    <section>
+      <h2>Code &amp; figures<span class="rule"></span></h2>
+      <p><a class="ref" href="https://github.com/FibreCase/openfoam-cylinder2D" target="_blank" rel="noopener">OpenFOAM cylinder-flow case ↗</a></p>
+      <p><a class="ref" href="/#cfd">View all six presentation figures on the main page</a></p>
+    </section>
+  </main>
+</Base>
