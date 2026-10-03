@@ -1,6 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
-import portrait from '../../me.png';
+import portrait from '../assets/me.png';
 ---
 
 <Base>
@@ -10,6 +10,7 @@ import portrait from '../../me.png';
   <div class="page">
     <p class="kicker"><span class="dot"></span>Prospective PhD Student · Fall 2027</p>
     <div class="hero-profile">
+    <img class="hero-portrait" src={portrait.src} width={portrait.width} height={portrait.height} alt="Portrait of Ying Xu" loading="eager" fetchpriority="high" decoding="async" />
     <div class="hero-copy">
     <h1>Ying Xu</h1>
     <p class="tag">
@@ -23,7 +24,6 @@ import portrait from '../../me.png';
       <a href="/CV-YingXu-27fallPhD.pdf">CV (PDF)</a>
     </div>
     </div>
-    <img class="hero-portrait" src={portrait.src} width={portrait.width} height={portrait.height} alt="Portrait of Ying Xu" loading="eager" fetchpriority="high" decoding="async" />
     </div>
   </div>
 </div>

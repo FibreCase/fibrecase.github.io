@@ -76,7 +76,7 @@ body {
 
 /* ---------- hero ---------- */
 .hero { padding: 56px 0 40px; border-bottom: 2px solid var(--line); }
-.hero-profile { display: grid; grid-template-columns: minmax(0, 1fr) 220px; gap: 24px; align-items: center; }
+.hero-profile { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 24px; align-items: center; }
 .hero-copy { min-width: 0; }
 .hero-portrait {
   display: block; width: 220px; max-width: 100%; height: auto;
