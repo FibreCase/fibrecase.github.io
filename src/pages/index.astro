@@ -1,6 +1,5 @@
 ---
 import Base from '../layouts/Base.astro';
-import { Image } from 'astro:assets';
 import portrait from '../../me.png';
 ---
 
@@ -24,7 +23,7 @@ import portrait from '../../me.png';
       <a href="/CV-YingXu-27fallPhD.pdf">CV (PDF)</a>
     </div>
     </div>
-    <Image class="hero-portrait" src={portrait} alt="Portrait of Ying Xu" widths={[240, 480]} sizes="(max-width: 560px) 160px, 180px" format="webp" loading="eager" fetchpriority="high" />
+    <img class="hero-portrait" src={portrait.src} width={portrait.width} height={portrait.height} alt="Portrait of Ying Xu" loading="eager" fetchpriority="high" decoding="async" />
     </div>
   </div>
 </div>
