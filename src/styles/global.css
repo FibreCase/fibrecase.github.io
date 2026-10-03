@@ -76,10 +76,10 @@ body {
 
 /* ---------- hero ---------- */
 .hero { padding: 56px 0 40px; border-bottom: 2px solid var(--line); }
-.hero-profile { display: grid; grid-template-columns: 198px minmax(0, 1fr); gap: 24px; align-items: center; }
+.hero-profile { display: grid; grid-template-columns: 178.2px minmax(0, 1fr); gap: 32px; align-items: center; }
 .hero-copy { min-width: 0; }
 .hero-portrait {
-  display: block; width: 198px; max-width: 100%; height: auto;
+  display: block; width: 178.2px; max-width: 100%; height: auto;
 }
 .hero .kicker {
   font-size: 12px; font-weight: 700; letter-spacing: 3px;
@@ -221,8 +221,8 @@ footer .inner b { color: var(--accent); }
   .nav-links { order: 4; flex-basis: 100%; justify-content: space-between; }
   table.skills th { width: 100px; letter-spacing: .6px; }
   .hero { padding: 44px 0 32px; }
-  .hero-profile { grid-template-columns: 1fr; gap: 24px; }
-  .hero-portrait { width: 180px; }
+  .hero-profile { grid-template-columns: 1fr; gap: 32px; }
+  .hero-portrait { width: 162px; }
   .hero h1 { font-size: 42px; letter-spacing: -1px; }
   .hero .tag { font-size: 16px; }
   .meta { flex-direction: column; gap: 2px; }
