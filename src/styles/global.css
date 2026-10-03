@@ -76,6 +76,13 @@ body {
 
 /* ---------- hero ---------- */
 .hero { padding: 56px 0 40px; border-bottom: 2px solid var(--line); }
+.hero-profile { display: grid; grid-template-columns: minmax(0, 1fr) 180px; gap: 32px; align-items: center; }
+.hero-copy { min-width: 0; }
+.hero-portrait {
+  display: block; width: 180px; height: 225px;
+  object-fit: cover; object-position: 65% center;
+  background: var(--accent-soft); border: 2px solid var(--line);
+}
 .hero .kicker {
   font-size: 12px; font-weight: 700; letter-spacing: 3px;
   text-transform: uppercase; color: var(--accent); margin: 0 0 14px;
@@ -216,6 +223,8 @@ footer .inner b { color: var(--accent); }
   .nav-links { order: 4; flex-basis: 100%; justify-content: space-between; }
   table.skills th { width: 100px; letter-spacing: .6px; }
   .hero { padding: 44px 0 32px; }
+  .hero-profile { grid-template-columns: 1fr; gap: 24px; }
+  .hero-portrait { width: 160px; height: 200px; }
   .hero h1 { font-size: 42px; letter-spacing: -1px; }
   .hero .tag { font-size: 16px; }
   .meta { flex-direction: column; gap: 2px; }

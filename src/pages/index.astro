@@ -1,5 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
+import { Image } from 'astro:assets';
+import portrait from '../../me.png';
 ---
 
 <Base>
@@ -8,6 +10,8 @@ import Base from '../layouts/Base.astro';
 <div class="hero">
   <div class="page">
     <p class="kicker"><span class="dot"></span>Prospective PhD Student · Fall 2027</p>
+    <div class="hero-profile">
+    <div class="hero-copy">
     <h1>Ying Xu</h1>
     <p class="tag">
       <b>Power systems</b> and <b>renewable energy integration</b>.
@@ -18,6 +22,9 @@ import Base from '../layouts/Base.astro';
       <a href="mailto:fibrecase@ncepu.edu.cn">Email</a>
       <a href="https://github.com/FibreCase" target="_blank" rel="noopener">GitHub</a>
       <a href="/CV-YingXu-27fallPhD.pdf">CV (PDF)</a>
+    </div>
+    </div>
+    <Image class="hero-portrait" src={portrait} alt="Portrait of Ying Xu" widths={[240, 480]} sizes="(max-width: 560px) 160px, 180px" format="webp" loading="eager" fetchpriority="high" />
     </div>
   </div>
 </div>
