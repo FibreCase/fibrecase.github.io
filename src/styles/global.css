@@ -81,7 +81,6 @@ body {
 .hero-portrait {
   display: block; width: 180px; height: 225px;
   object-fit: cover; object-position: 65% center;
-  background: var(--accent-soft); border: 2px solid var(--line);
 }
 .hero .kicker {
   font-size: 12px; font-weight: 700; letter-spacing: 3px;
